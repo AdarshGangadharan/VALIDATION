@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTER</title>
+	<link rel="stylesheet" type="text/css" href="des.css">
+</head>
+<body>
+  
+<!-- JAVASCIPT CODE-->
+
+	<script type="text/javascript">
+		
+		function submitForm()
+		{
+			var sname=document.myForm.sname;
+			if ( sname.value=="")
+			{
+	        	alert("Please enter the student name");
+	        	sname.focus();
+	        	return false;
+	        }
+	        else if(document.myForm.sname.value.length<2 || document.myForm.sname.value.length>20 )
+	        {
+	        	alert("name should not be greater than 2 or less than 20");
+	        	sname.focus();
+	        	return false;
+	        }
+	        var fname=document.myForm.fname;
+	        if(fname.value=="")
+	        {
+	        	alert("Please enter the father name");
+	        	fname.focus();
+	        	return false;
+	        }
+	        var mname=document.myForm.mname;
+	        if(mname.value=="")
+	        {
+	        	alert("Please enter the mother name");
+	        	mname.focus();
+	        	return false;
+	        }
+	        var dob=document.myForm.dob;
+	        if(dob.value=="")
+	        {
+	        	alert("Please enter the dob");
+	        	dob.focus();
+	        	return false;
+	        }
+	        var email=document.myForm.email;
+	        if(email.value=="")
+	        {
+	        	alert("Please enter a valid mail");
+	        	email.focus();
+	        	return false;
+	        }
+	        var phone=document.myForm.phone;
+	        if(phone.value=="")
+	        {
+	        	alert("Please enter the phone number");
+	        	phone.focus();
+	        	return false;
+	        }
+	        var address=document.myForm.address;
+	        if(address.value=="")
+	        {
+	        	alert("Please enter the address");
+	        	address.focus();
+	        	return false;
+	        }
+	        var city=document.myForm.city;
+	        if(city.value=="")
+	        {
+	        	alert("Please enter the city");
+	        	city.focus();
+	        	return false;
+	        }
+
+		}
+	</script>
+	
+	<form  name="myForm" action="v.html" onsubmit="return submitForm()" method="post" id="form1">
+	<div id=all>
+		<div class="container">
+			<CENTER><b><h2>STUDENT APPLICATION FORM </h2></b></CENTER><br>
+		</div>
+		
+		<div id=person>
+			<b><H3><font color="white">PERSONAL DETAILS</font></H3></b>
+		</div>
+		
+		<div id=det1>
+	    	<fieldset>
+                <table>
+				<h4><tr><td>STUDENT NAME:</td><td><input type="text" id="sname" name="sname"><br></td></tr>
+				<tr><td>FATHER'S NAME:</td><td><input type="text" name="fname"><br></tr>
+				<tr><td>MOTHER'S NAME:</td><td><input type="text" name="mname"><br></td></tr>
+				<tr><td>DOB:</td><td><input type="date" name="dob"><br></td></tr>
+				<tr><td>GENDER:</td><td><select name="dropdown">
+					<option>MALE</option>
+					<OPTION>FEMALE</OPTION>
+					<option>OTHER</option>
+				</select><br></td></tr>
+				<tr><td>INSTITUTION NAME:</td><td><select name="dropdown2">
+					<option>PONDICHERRY UNIVERSITY</option>
+					<option>PEC</option>
+					<option>DELHI UNIVERITY</option>
+					<option>JNU</option>
+					<option>HYDERABAD UNIVERSITY</option>
+				</select></td></tr>
+				</h4>
+			</table>
+
+  		</fieldset>
+	</div>
+	
+	<div id=contact>
+		<h3><font color="white">CONTACT DETAILS</font></h3>
+	</div>
+	
+
+	<div id=det2>
+		<fieldset>
+           <table>
+				<tr><td>EMAIL ID:</td><td><input type="email" name="email"><br></td></tr>
+				<tr><td>MOBILE NUMBER:</td><td><input type="tel" name="phone"><br></td></tr>
+				<tr><td>ADDRESS FOR COMMUNICATION<br></td></tr>
+				<tr><td>ADDRESS1:</td>
+				<td><input type="textarea" name="address"><br></td></tr>
+				<tr><td>CITY:</td><td><input type="text" name="city"><br></td></tr>
+				<tr><td>DISTRICT:</td><td><select>
+					<option>PUDUCHERRY</option>
+					<option>CALICUT</option>
+					<option>TVM</option>
+				</select></td></tr>
+
+			</table>
+        </fieldset>
+    </div>
+ 
+    <center><input type="submit" name="SUBMIT"></center>
+     </div>
+  </form>
+  
+</body>
+</html>
